@@ -1,24 +1,24 @@
 from parse_config import Parse, tests
 from schedule import Schedule
 import argparse
-import daemon
-import sys
-import time
-import datetime
-import rest_api
-import psjson
-import os
-import signal
-import ssid_scan
-import connect_bssid
-import json
-import warnings
-import pika
-import syslog
-import traceback
-import multiprocessing
-import subprocess as sp
-from batch.pscheduler.pscheduler.batchprocessor import BatchProcessor
+# import daemon
+# import sys
+# import time
+# import datetime
+# import rest_api
+# import psjson
+# import os
+# import signal
+# import ssid_scan
+# import connect_bssid
+# import json
+# import warnings
+# import pika
+# import syslog
+# import traceback
+# import multiprocessing
+# import subprocess as sp
+# from batch.pscheduler.pscheduler.batchprocessor import BatchProcessor
 
 
 parser = argparse.ArgumentParser(description='pSSID')
