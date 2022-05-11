@@ -39,4 +39,5 @@ config_file.close()
 
 schedule = Schedule(parsed_file)
 schedule.initial_schedule()
+schedule.print_queue()
 
