@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+import pscheduler
+import sys
+
+filter = pscheduler.JQFilter(".")
+res = list(filter("JQ works."))[0]
+print(res)
+
+if res != "JQ works.":
+    sys.exit(1)

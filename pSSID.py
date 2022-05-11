@@ -17,8 +17,8 @@ import pika
 import syslog
 import traceback
 import multiprocessing
-import re
 import subprocess as sp
+from batch.pscheduler.pscheduler.batchprocessor import BatchProcessor
 
 parser = argparse.ArgumentParser(description='pSSID')
 parser.add_argument('file', action='store',
@@ -143,7 +143,6 @@ def single_BSSID_qualify(bssid, ssid):
 
     ssid is a single SSID_profiles object
     """
-    ret = True
 
     if bssid["ssid"] != ssid["SSID"]:
             return False
@@ -151,12 +150,12 @@ def single_BSSID_qualify(bssid, ssid):
     # Disqualify based on channel
     if not channel_match(bssid, ssid):
         if not ssid["channel_mismatch_connect"]:
-            ret = False
+            return False
 
     # Disqualify based on signal strength
     if bssid["signal"] < ssid["min_signal"]:
-        ret = False
-    return ret
+        return False
+    return True
 
 
 def BSSID_qualify(bssid_list, ssid):
@@ -421,8 +420,9 @@ def run_child(bssid_list, main_obj, ssid, interface):
     if change_mac:
         # change to permanent mac
         change_macaddress('permanent')
-            
 
+def batch_processing():
+    processor = BatchProcessor(batch)
 
 def loop_forever():
 
