@@ -243,7 +243,7 @@
     },
 
     "SSID_groups": {
-        "all_profiles": ["eduroam_profile","MWireless_profile","MSetup_profile", "MGuest"],
+        "all_profiles": ["eduroam_profile","MWireless_profile","MSetup_profile", "MGuest_profile"],
         "WPA_encrypted_profiles": ["eduroam_profile","MWireless_profile"]
 
     },

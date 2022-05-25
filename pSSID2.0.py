@@ -18,7 +18,6 @@ import argparse
 # import traceback
 # import multiprocessing
 # import subprocess as sp
-# from batch.pscheduler.pscheduler.batchprocessor import BatchProcessor
 
 
 parser = argparse.ArgumentParser(description='pSSID')
@@ -40,4 +39,9 @@ config_file.close()
 schedule = Schedule(parsed_file)
 schedule.initial_schedule()
 schedule.print_queue()
+
+while True:
+  
+  schedule.pop()
+
 

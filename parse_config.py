@@ -4,7 +4,8 @@ import traceback
 from crontab import CronTab
 import sys
 import argparse
-
+from croniter import croniter
+from datetime import datetime
 
 def scan_bssids(self):
     """
@@ -32,7 +33,7 @@ def scan_bssids(self):
             schedlist = scan_profile["schedule"]
             for j in schedlist:
                 scansched = self.schedules[j]
-                cron_list.append(CronTab(str(scansched["repeat"])))
+                cron_list.append(croniter(str(scansched["repeat"])))
 
             scan_obj["schedule"] = cron_list
         except:
@@ -95,7 +96,7 @@ class Parse:
             schedlist = self.tasks[given_task]["schedule"]
             for i in schedlist:
                 tasksched = self.schedules[i]
-                cron_list.append(CronTab(str(tasksched["repeat"])))
+                cron_list.append(croniter(str(tasksched["repeat"])))
         except:
             print("ERROR in retrieving \"schedule\" from", given_task)
             print(traceback.print_exc())

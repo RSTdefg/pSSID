@@ -1,0 +1,305 @@
+{
+  "result": ["uU8D3RhE"],
+  "entities": {
+    "proposals": [
+      {
+        "uid": "uU8D3RhE",
+        "title": "EventMesh Admin Dashboard",
+        "document_url": "https://summerofcode.withgoogle.com/media/user/92831983e8ac/proposal/Z8MdvFv1iY4gBHwb.pdf",
+        "doc_filename": "proposal.pdf",
+        "body": "Currently, there is no front end user interface for the control plane of EventMesh. For this project, we're building a front end user interface for eventmesh-admin which will enhance topic and subscription management experience by leveraging front-end frameworks to abstract away the complexity of dealing with back-end APIs. We will also implement additional APIs for the eventmesh-admin module that will extend the module's functionality.",
+        "size": "large",
+        "tech_tags": ["javascript", "react"],
+        "topic_tags": ["web", "cloud native", "eda"],
+        "status": "revision",
+        "is_selected": true,
+        "ranking": 14,
+        "date_created": "2022-04-19T04:49:56.362609Z",
+        "date_updated": "2022-05-16T22:04:43.010290Z",
+        "date_uploaded": "2022-04-19T17:47:39.697021Z",
+        "contributor_id": "115529426564814205593",
+        "contributor_name": "kfliu",
+        "contributor_email": "kaifengliu235@gmail.com",
+        "organization_slug": "apache-software-foundation",
+        "program_slug": "2022",
+        "assigned_mentors": ["Xiaoyang Liu"],
+        "interested_mentors": ["Xiaoyang Liu"],
+        "audit_log": [
+          {
+            "date": "2022-04-19 04:49:56.369933+00:00",
+            "message": "Submitted by kfliu"
+          },
+          {
+            "date": "2022-04-19 17:47:39.709102+00:00",
+            "message": "Updated by kfliu"
+          },
+          {
+            "date": "2022-04-19 17:53:23.008585+00:00",
+            "message": "Updated by kfliu"
+          },
+          {
+            "date": "2022-04-19 17:53:34.366829+00:00",
+            "message": "Updated by kfliu"
+          },
+          {
+            "date": "2022-05-11 21:05:33.208616+00:00",
+            "message": "Moved to approved by sanyamgoel96"
+          },
+          {
+            "date": "2022-05-11 21:36:49.494695+00:00",
+            "message": "Assigned to mentors Xiaoyang Liu by sanyamgoel96"
+          },
+          {
+            "date": "2022-05-11 22:40:55.797021+00:00",
+            "message": "Rank set to 14 by sanyamgoel96"
+          }
+        ],
+        "is_starred": false
+      }
+    ],
+    "organizations": [
+      {
+        "name": "Apache Software Foundation",
+        "slug": "apache-software-foundation",
+        "reg_previous": true,
+        "proj_start_year": 1999,
+        "reg_participation_years": [
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "logo_url": "https://summerofcode.withgoogle.com/media/org/apache-software-foundation/hq22fwtmvdfjnsh9-360.png",
+        "website_url": "https://apache.org",
+        "tagline": "Open source software to the public free of charge",
+        "license": "Apache-2.0",
+        "categories": ["Other"],
+        "contributor_guidance_url": "http://community.apache.org/gsoc.html#students-read-this",
+        "description": "The Foundation provides an established framework for intellectual property and financial contributions that simultaneously limits contributors potential legal exposure. Through a collaborative and meritocratic development process, Apache projects deliver enterprise-grade, freely available software products that attract large communities of users. The pragmatic Apache License makes it easy for all users, commercial and individual, to deploy Apache products.",
+        "tech_tags": ["c", "java", "c++"],
+        "topic_tags": ["big data", "cloud", "libraries", "other"],
+        "contact_links": [
+          { "name": "chat", "value": "https://wiki.apache.org/general/IRC" },
+          {
+            "name": "mailingList",
+            "value": "http://apache.org/foundation/mailinglists.html"
+          }
+        ],
+        "source_code": "https://github.com/apache",
+        "additional_comments": "",
+        "ideas_link": "https://s.apache.org/gsoc2022ideas",
+        "is_active": true,
+        "date_created": "2022-03-08T14:42:51.797223Z",
+        "created_by": "Maxim Solodovnik",
+        "date_updated": "2022-03-08T14:42:51.797241Z",
+        "updated_by": "Maxim Solodovnik",
+        "direct_comm_methods": [
+          { "name": "chat", "value": "https://wiki.apache.org/general/IRC" },
+          {
+            "name": "mailingList",
+            "value": "http://apache.org/foundation/mailinglists.html"
+          }
+        ],
+        "social_comm_methods": [],
+        "agreements": [
+          {
+            "type": "organization_agreement",
+            "version": "2022.01",
+            "name": "Organization Agreement 2022 (2022)",
+            "agreed_by": "Maxim Solodovnik",
+            "datetime": "2022-02-20T04:36:11.318607Z"
+          },
+          {
+            "type": "organization_agreement",
+            "version": "2022.01",
+            "name": "Organization Agreement 2022",
+            "agreed_by": "Maxim Solodovnik",
+            "datetime": "2022-02-10T01:51:23.174557Z"
+          }
+        ],
+        "application_eligibility": {
+          "is_eligible": true,
+          "profile_completeness": 100,
+          "questionnaire_completeness": 100
+        }
+      }
+    ],
+    "programs": [
+      {
+        "name": "2022",
+        "slug": "2022",
+        "is_active": true,
+        "phase": "slot_allocation",
+        "terms_contributor": "2022.01",
+        "terms_member": "2022.01",
+        "terms_organization": "2022.01",
+        "terms_rules": "2022.01",
+        "date_created": "2022-03-12T01:37:14.439742Z",
+        "project_sizes": ["medium", "large"],
+        "stats": { "orgs_accepted": 202 },
+        "milestones": [
+          {
+            "name": "prog_announce",
+            "datetime": "2021-11-05T17:00:00Z",
+            "label": "Program Announce Date"
+          },
+          {
+            "name": "org_application_start",
+            "datetime": "2022-02-07T18:00:00Z",
+            "label": "Org Applications Open"
+          },
+          {
+            "name": "org_application_deadline",
+            "datetime": "2022-02-21T18:00:00Z",
+            "label": "Org Application Deadline"
+          },
+          {
+            "name": "org_notification",
+            "datetime": "2022-03-06T18:00:00Z",
+            "label": "Org Notification Date"
+          },
+          {
+            "name": "org_announce_public",
+            "datetime": "2022-03-07T18:00:00Z",
+            "label": "Accepted Orgs Announced"
+          },
+          {
+            "name": "contributor_proposals_open",
+            "datetime": "2022-04-04T16:30:00Z",
+            "label": "Contributor Proposals Open"
+          },
+          {
+            "name": "proposal_deadline",
+            "datetime": "2022-04-19T18:00:00Z",
+            "label": "Proposal Deadline"
+          },
+          {
+            "name": "proposal_ranking_deadline",
+            "datetime": "2022-05-12T18:00:00Z",
+            "label": "Proposal Ranking Deadline"
+          },
+          {
+            "name": "project_announce_oa",
+            "datetime": "2022-05-19T18:00:00Z",
+            "label": "Projects Announced to Orgs"
+          },
+          {
+            "name": "project_announce_public",
+            "datetime": "2022-05-20T18:00:00Z",
+            "label": "Accepted Projects Announced"
+          },
+          {
+            "name": "project_work_start",
+            "datetime": "2022-06-13T18:00:00Z",
+            "label": "Project Work Period Start"
+          },
+          {
+            "name": "program_end",
+            "datetime": "2022-12-02T18:00:00Z",
+            "label": "Program End Date"
+          },
+          {
+            "name": "midterm_evaluation_start",
+            "datetime": "2022-07-25T18:00:00Z",
+            "label": "Midterm Evaluation Start (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "midterm_evaluation_deadline",
+            "datetime": "2022-07-29T18:00:00Z",
+            "label": "Midterm Evaluation Deadline (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "final_submission_start",
+            "datetime": "2022-09-05T18:00:00Z",
+            "label": "Final Submission Start (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "final_submission_deadline",
+            "datetime": "2022-09-12T18:00:00Z",
+            "label": "Final Submission Deadline (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "final_evaluation_start",
+            "datetime": "2022-09-12T18:00:00Z",
+            "label": "Final Evaluation Start (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "final_evaluation_deadline",
+            "datetime": "2022-09-19T18:00:00Z",
+            "label": "Final Evaluation Deadline (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "project_completion",
+            "datetime": "2022-11-28T19:00:00Z",
+            "label": "Project Completion Date (medium project)",
+            "project_size": "medium"
+          },
+          {
+            "name": "midterm_evaluation_start",
+            "datetime": "2022-07-25T18:00:00Z",
+            "label": "Midterm Evaluation Start (large project)",
+            "project_size": "large"
+          },
+          {
+            "name": "midterm_evaluation_deadline",
+            "datetime": "2022-07-29T18:00:00Z",
+            "label": "Midterm Evaluation Deadline (large project)",
+            "project_size": "large"
+          },
+          {
+            "name": "final_submission_start",
+            "datetime": "2022-09-05T18:00:00Z",
+            "label": "Final Submission Start (large project)",
+            "project_size": "large"
+          },
+          {
+            "name": "final_submission_deadline",
+            "datetime": "2022-09-12T18:00:00Z",
+            "label": "Final Submission Deadline (large project)",
+            "project_size": "large"
+          },
+          {
+            "name": "final_evaluation_start",
+            "datetime": "2022-09-12T18:00:00Z",
+            "label": "Final Evaluation Start (large project)",
+            "project_size": "large"
+          },
+          {
+            "name": "final_evaluation_deadline",
+            "datetime": "2022-09-19T18:00:00Z",
+            "label": "Final Evaluation Deadline (large project)",
+            "project_size": "large"
+          },
+          {
+            "name": "project_completion",
+            "datetime": "2022-11-28T18:00:00Z",
+            "label": "Project Completion Date (large project)",
+            "project_size": "large"
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "user_proposals_count": [{ "program_slug": "2022", "proposals_count": 1 }]
+  }
+}

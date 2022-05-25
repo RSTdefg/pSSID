@@ -38,7 +38,7 @@ class Schedule:
 		if given_time > time.time():
 			set_time = given_time
 		
-		schedule_time =  set_time  + given_cron.next(set_time)
+		schedule_time =  set_time + given_cron.next()
 		self.s.enterabs(schedule_time, given_obj["priority"], run_schedule, argument = (given_obj,given_cron,given_ssid, scan))
 
 

@@ -55,7 +55,6 @@ def json_substitute(json, value, replacement):
         for item in json:
             result.append(json_substitute(item, value, replacement))
         return result
-
     else:
         return json
 

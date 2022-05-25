@@ -177,11 +177,11 @@
     	}
     },
 
-    "tasks": {
+    "jobs": {
         "example_task_rtt": {
             "profiles": ["MWireless_profile"],
             "BSSIDs": "primary_BSSIDs",
-            "test": [ "example_test_rtt" ],
+            "tests": [ "example_test_rtt" ],
             "archives": [ "example_rabbitmq_archive", "example_syslog_archive" ],
             "schedule": [ "schedule_every_1_hour", "schedule_Tuesday_10:10AM" ],
             "priority": 3,
