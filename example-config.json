@@ -1,0 +1,251 @@
+{
+    "bssid-scan-definitions": {
+        "Continual MWireless Scan": {
+            "priority": 0,
+            "schedule": [
+                "Every 15 Minutes"
+            ],
+            "profiles": "MWireless",
+            "meta_information": "N/A",
+            "interface": "RPi WiFi",
+            "unknown_SSID_warning": false
+        },
+        "Schooldays MWireless": {
+            "priority": 0,
+            "schedule": [
+                "Hourly During School"
+            ],
+            "profiles": "MWireless",
+            "meta_information": "N/A",
+            "interface": "RPi WiFi",
+            "unknown_SSID_warning": false
+        },
+        "Continual eduroam Scan": {
+            "priority": 0,
+            "schedule": [
+                "Every 15 Minutes"
+            ],
+            "profiles": "eduroam",
+            "meta_information": "N/A",
+            "interface": "RPi WiFi",
+            "unknown_SSID_warning": false
+        }
+    },
+    "archiver-definitions": {
+        "syslog": {
+            "data": {
+                "ident": "pSSID22 result",
+                "facility": "local3"
+            },
+            "archiver": "syslog"
+        },
+        "ELK Stack": {
+            "data": {
+                "op": "put",
+                "_url": "http://198.111.224.150:5001",
+                "schema": "2"
+            },
+            "archiver": "http"
+        },
+        "esmond": {
+            "data": {},
+            "archiver": "esmond"
+        },
+        "Rabbit MQ": {
+            "data": {
+                "routing-key": "pscheduler_raw",
+                "_url": "amqp://elastic:elastic@pssid-elk.miserver.it.umich.edu"
+            },
+            "archiver": "rabbitmq"
+        }
+    },
+    "schedule-definitions": {
+        "Every 15 Minutes": {
+            "repeat": "*/15 * * * *"
+        },
+        "Twice a Day": {
+            "repeat": "0 0,12 * * *"
+        },
+        "Every Four Hours": {
+            "repeat": "0 */4 * * *"
+        },
+        "Hourly During School": {
+            "repeat": "0 9-17 * sep-dec,jan-may 1-5"
+        }
+    },
+    "bssid-channel-definitions": {
+        "MWireless Channels": {
+            "channels": [
+                2,
+                7,
+                1,
+                4
+            ]
+        },
+        "eduroam Channels": {
+            "channels": [
+                1,
+                34,
+                4,
+                3
+            ]
+        }
+    },
+    "ssid-profile-definitions": {
+        "eduroam": {
+            "channel_mismatch_connect": true,
+            "channel_mismatch_warning": true,
+            "min_qualifying": 2,
+            "AuthMethod": {
+                "connection_flags": {
+                    "paranoid": false,
+                    "pscheduler_restart": false,
+                    "wait_time": 0,
+                    "apache_restart": false,
+                    "postgres_restart": false
+                },
+                "type": "?",
+                "UID": "?"
+            },
+            "min_signal": 3,
+            "channels": "eduroam Channels",
+            "SSID": "eduroam"
+        },
+        "MWireless": {
+            "channel_mismatch_connect": true,
+            "channel_mismatch_warning": true,
+            "min_qualifying": 12,
+            "AuthMethod": {
+                "connection_flags": {
+                    "paranoid": false,
+                    "pscheduler_restart": false,
+                    "wait_time": 0,
+                    "apache_restart": false,
+                    "postgres_restart": false
+                },
+                "type": "?",
+                "UID": "?"
+            },
+            "min_signal": 21,
+            "channels": "MWireless Channels",
+            "SSID": "MWireless"
+        }
+    },
+    "ssid-group-definitions": {
+        "eduroam": {
+            "nodes": [
+                "eduroam"
+            ]
+        },
+        "MWireless": {
+            "nodes": [
+                "MWireless"
+            ]
+        },
+        "all": {
+            "nodes": [
+                "eduroam",
+                "MWireless"
+            ]
+        }
+    },
+    "network-interface-definitions": {
+        "RPi WiFi": {
+            "interface": "wlan0"
+        }
+    },
+    "test-definitions": {
+        "perfsonar.net CNAME": {
+            "type": "dns",
+            "spec": {
+                "query": "www.perfsonar.net",
+                "record": "cname"
+            }
+        },
+        "Throughput (broken)": {
+            "type": "throughput",
+            "spec": {
+                "dest": "perfsonar-bin-arbl.umnet.umich.edu"
+            }
+        },
+        "MTU against fsf.org": {
+            "type": "mtu",
+            "spec": {
+                "dest": "fsf.org"
+            }
+        },
+        "Trace example.org": {
+            "type": "trace",
+            "spec": {
+                "dest": "example.org"
+            }
+        },
+        "dot1x (todo)": {
+            "type": "dot1x",
+            "spec": {}
+        },
+        "HTTP against google.com": {
+            "type": "http",
+            "spec": {
+                "url": "www.google.com"
+            }
+        },
+        "Latency against umich.edu": {
+            "type": "latency",
+            "spec": {
+                "dest": "www.umich.edu"
+            }
+        },
+        "Vanilla DHCP (broken)": {
+            "type": "dhcp",
+            "spec": {}
+        },
+        "RTT against 8.8.8.8": {
+            "type": "rtt",
+            "spec": {
+                "dest": "8.8.8.8"
+            }
+        }
+    },
+    "job-definitions": {
+        "All Tests": {
+            "tests": [
+                "perfsonar.net CNAME",
+                "Trace example.org",
+                "Vanilla DHCP (broken)",
+                "dot1x (todo)",
+                "HTTP against google.com",
+                "Latency against umich.edu",
+                "MTU against fsf.org",
+                "RTT against 8.8.8.8",
+                "Throughput (broken)"
+            ],
+            "continue-if": "true",
+            "id": 0
+        }
+    },
+    "batch-definitions": {
+        "All Batch": {
+            "jobs": [
+                "All Tests"
+            ],
+            "schedule": [
+                "Every 15 Minutes"
+            ],
+            "profiles": [
+                "eduroam",
+                "MWireless"
+            ],
+            "priority": 0,
+            "archivers": [
+                "ELK Stack"
+            ],
+            "ttl": 0,
+            "BSSIDs": "Schooldays MWireless"
+        }
+    },
+    "meta": {},
+    "batches": [
+        "All Batch"
+    ]
+}
